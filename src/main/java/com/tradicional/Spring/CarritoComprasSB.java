@@ -1,20 +1,23 @@
-package com.tradicional.carrito;
+package com.tradicional.Spring;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CarritoCompras {
+import org.springframework.stereotype.Service;
+
+@Service
+public class CarritoComprasSB {
 	
-	private List<Producto> carrito = new ArrayList();
+	private List<ProductoSB> carrito = new ArrayList();
 	
 	
-	public void agregarProducto(Producto producto) {
+	public void agregarProducto(ProductoSB producto) {
 		carrito.add(producto);
 		
 	}
 	
 	
-	protected void eliminarProducto(Producto producto) {
+	protected void eliminarProducto(ProductoSB producto) {
 		if (carrito.contains(producto)) {
 			carrito.remove(producto);
 		}
